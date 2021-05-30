@@ -31,8 +31,9 @@ function main() {
     var mvs_y = 0;
     var tgt_id_no;
     var z_idx_ini = 100;
-    var img_wdt = 194;
-    var img_hgt = 172;
+    /* card size */
+    var img_wdt = 194; // card width
+    var img_hgt = 172; // card height
     var card_elm = document.getElementsByClassName("card");
     for(var i=0; i< card_elm.length; i++){
         card_elm[i].style.cssText = "transform:rotate("+transForm()+"deg);"; // degree
@@ -43,6 +44,7 @@ function main() {
         card_elm[i].style.zIndex = z_idx_ini;
         card_elm[i].style.backgroundColor = "#"+tweet[i][5]; // Card Color
         card_elm[i].children[1].innerText = tweet[i][7]; // Tweet Contents
+        card_elm[i].children[2].children[1].innerText = tweet[i][2];
     }
 
     /* MouseDown */
