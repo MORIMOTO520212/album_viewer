@@ -18,56 +18,19 @@
         <div id="album" class="album">
             <?php
             $count = 6; // カード表示数
+            for($i=0; $i<$count; $i++){
             ?>
-            <div class="card" id="000001_1" style="left:0px; top:0px; background-color:#000;">
-                <div class="draggable" id="000001"></div>
+            <div class="card" id="<?php echo sprintf("%02d", $i); ?>_1" style="left:0px; top:0px; background-color:#fff;">
+                <div class="draggable" id="<?php echo sprintf("%02d", $i); ?>"></div>
                 <div class="contents font no-selection"></div>
                 <div class="user">
-                    <div class="icon"><img class="no-selection" src="https://pbs.twimg.com/profile_images/1367713475477180421/rVsC3Z54_normal.jpg"></div>
+                    <div class="icon"><img class="no-selection" src></div>
                     <div class="name font no-selection">Twitter</div>
                 </div>
             </div>
-            <div class="card" id="000002_1" style="left:0px; top:0px; background-color:#000;">
-                <div class="draggable" id="000002"></div>
-                <div class="contents font no-selection"></div>
-                <div class="user">
-                    <div class="icon"><img class="no-selection" src="assets/TwitterLogoWhite.svg"></div>
-                    <div class="name font no-selection">Twitter</div>
-                </div>
-            </div>
-            <div class="card" id="000003_1" style="left:0px; top:0px; background-color:#000;">
-                <div class="draggable" id="000003"></div>
-                <div class="contents font no-selection"></div>
-                <div class="user">
-                    <div class="icon"><img class="no-selection" src="assets/TwitterLogoWhite.svg"></div>
-                    <div class="name font no-selection">Twitter</div>
-                </div>
-            </div>
-            <div class="card" id="000004_1" style="left:0px; top:0px; background-color:#000;">
-                <div class="draggable" id="000004"></div>
-                <div class="contents font no-selection"></div>
-                <div class="user">
-                    <div class="icon"><img class="no-selection" src="assets/TwitterLogoWhite.svg"></div>
-                    <div class="name font no-selection">Twitter</div>
-                </div>
-            </div>
-            <div class="card" id="000005_1" style="left:0px; top:0px; background-color:#000;">
-                <div class="draggable" id="000005"></div>
-                <div class="contents font no-selection"></div>
-                <div class="user">
-                    <div class="icon"><img class="no-selection" src="assets/TwitterLogoWhite.svg"></div>
-                    <div class="name font no-selection">Twitter</div>
-                </div>
-            </div>
-            <div class="card" id="000006_1" style="left:0px; top:0px; background-color:#000;">
-                <div class="draggable" id="000006"></div>
-                <div class="contents font no-selection"></div>
-                <div class="user">
-                    <div class="icon"><img class="no-selection" src="assets/TwitterLogoWhite.svg"></div>
-                    <div class="name font no-selection">Twitter</div>
-                </div>
-            </div>
-        </div>
+            <?php
+            }
+            ?>
         <script src="assets/base.js"></script>
     </body>
 </html>

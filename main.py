@@ -38,6 +38,7 @@ for tweet in tweepy.Cursor(api.search, q=search_query, result_type=result_type).
 
         text = re.sub(hashtag.replace(",","|"), '', tweet.text)
         text = text.replace("\n","").replace("#","").replace("＃","") # コンテンツ内容
+        text = re.sub("https://t.co/[a-zA-Z0-9]{10}", "", text);
 
         if "RT @" not in text:
             df.loc[0] = [ # データ挿入

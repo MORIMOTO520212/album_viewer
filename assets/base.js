@@ -45,6 +45,8 @@ function main() {
         card_elm[i].style.backgroundColor = "#"+tweet[i][5]; // Card Color
         card_elm[i].children[1].innerText = tweet[i][7]; // Tweet Contents
         card_elm[i].children[2].children[1].innerText = tweet[i][2];
+        card_elm[i].children[2].children[0].children[0].setAttribute("src", tweet[i][4]); // Twitter user Profile Image
+        console.log(tweet[i][4]);
     }
 
     /* MouseDown */
